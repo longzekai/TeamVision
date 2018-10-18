@@ -113,7 +113,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'doraemon_nirvana',
         'USER': 'teamcat',
-        'PASSWORD': 'Nopass.2',
+        'PASSWORD': 'XXXXXX',
         'HOST': MYSQLHOST,
         'PORT': MYSQLPORT,
     },
@@ -191,9 +191,9 @@ REDIS = {
 }
 
 EMAILCONFIG = {
-    'HOST': 'smtp.kingsoft.com',
+    'HOST': 'smtp.teamcat.cn',
     'PORT': 25,
-    'USER': 'gedqa',
+    'USER': 'qa',
     'PASSWORD': '',
     'ISAUTH': False,
     'STARTSSL': False,
