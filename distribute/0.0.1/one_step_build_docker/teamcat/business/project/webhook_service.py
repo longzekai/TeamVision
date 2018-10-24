@@ -8,7 +8,6 @@ Created on 2015-11-17
 from doraemon.project.models import WebHook
 from django.contrib.admin.models import DELETION,CHANGE,ADDITION
 from gatesidelib.httplibhelper import HttpLibHelper
-from doraemon.home.viewmodels.vm_jenkins_job import VM_JenkinsJob
 from business.common.jenkinsservice import JenkinsService
 
 class WebHookService(object):

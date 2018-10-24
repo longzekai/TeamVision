@@ -19,11 +19,11 @@ def login(request):
             if not request.user.is_authenticated:
                 return page_worker.user_login_page(request,"")
             else:
-                return redirect('/home/summary')
+                return redirect('/project')
         else:
             message= UserService.login(request)
             if message=="":
-                return redirect(request.GET.get('next','/home/summary'))
+                return redirect(request.GET.get('next','/project'))
             else:
                 return page_worker.user_login_page(request,message)
     except Exception as ex:

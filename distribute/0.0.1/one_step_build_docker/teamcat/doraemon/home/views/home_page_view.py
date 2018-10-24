@@ -20,39 +20,13 @@ from doraemon.settings import LOG_CONFIG
 def home_page(request):
     try:
         if request.user.is_authenticated:
-            return redirect("/home/summary")
+            return redirect("/project")
         else:
             page_worker=HomeUnloginPageWorker(request)
             return page_worker.get_welcome_page(request)
     except Exception as ex:
         message=str(ex)
     return HttpResponse(message)
-
-def project_summary(request):
-    page_worker=HomeUnloginPageWorker(request)
-    return page_worker.project_summary_page(request)
-
-def device_summary(request):
-    if request.user.is_authenticated:
-        return redirect("/home/device/all")
-    else:
-        page_worker=HomeUnloginPageWorker(request)
-        return page_worker.device_summary_page(request)
-
-
-def projects_json(request):
-    result=list()
-    projects=Project.objects.all()
-    for project in projects:
-        vm_project=VM_Project(None,False,project,False)
-        temp_dict={}
-        temp_dict["Project"]=project.PBTitle
-        temp_dict["Platform"]=vm_project.platform_title()
-        temp_dict["Creator"]=vm_project.project_lead()
-        temp_dict["Product"]=vm_project.product_title()
-        result.append(temp_dict)
-    json_encoder=JSONEncoder()
-    return HttpResponse(json_encoder.encode(result))
     
     
     

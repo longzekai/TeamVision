@@ -17,7 +17,7 @@ from business.ci.ci_task_service import CITaskService
 from business.ci.ci_task_history_service import CITaskHistoryService
 from business.ci.ci_task_config_service import CITaskConfigService
 from doraemon.home.models import FileInfo
-from doraemon.settings import WEB_HOST
+from doraemon.settings import  WEB_HOST
 from gatesidelib.qr_code_helper import QRCodeHelper
 from business.common.file_info_service import FileInfoService
 
@@ -234,7 +234,7 @@ def mobile_download_page(request):
     if 'MAC' in user_agent.upper():
         FileInfoService.create_package_plist(file_id,history_id)
         FileInfoService.create_package_file(file_id)
-        package= WEB_HOST.replace("http","https")+"/static/plist_files/"+str(file_id)+".plist"
+        package=WEB_HOST.replcae("http","https")+"/static/plist_files/"+str(file_id)+".plist"
         os_name="iPhone"
         android=False
     else:

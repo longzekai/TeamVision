@@ -14,7 +14,6 @@ urlpatterns =[
     url(r'^ucenter/', include('doraemon.user_center.urlrouter.ucenter_urls')),
     url(r'^administrate/', include('doraemon.administrate.urlrouter.admin_urls')),
     url(r'^project/', include('doraemon.project.urlrouter.project_urls')),
-    url(r'^home/', include('doraemon.home.urlrouter.home_urls')),
     url(r'^device/', include('doraemon.device.urlrouter.device_urls')),
     url(r'^logcat/', include('doraemon.logcat.urlrouter.logcat_urls')),
     # url(r'^env/', include('doraemon.env.urlrouter.env_urls')),

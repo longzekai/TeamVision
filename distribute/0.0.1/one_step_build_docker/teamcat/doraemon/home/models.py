@@ -15,19 +15,6 @@ class HomeModel(models.Model):
     class Meta:
         abstract=True
 
-class WebApps(HomeModel):
-    app_title=models.CharField(max_length=50)
-    app_key=models.CharField(max_length=10)
-    app_url=models.CharField(max_length=500)
-    app_avatar=models.CharField(max_length=255,null=True)
-    app_desc=models.CharField(max_length=500,null=True)
-    app_visable_level=models.IntegerField()
-    app_creator=models.IntegerField()
-    objects=home_model_manager.WebappManager()
-    class Meta:
-        app_label="home"
-        db_table="home_webapps"
-
 class Agent(HomeModel):
     '''
     data model for testingcat agent

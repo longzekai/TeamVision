@@ -1,90 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="30f13146-edb3-4456-9941-e2eb683937c0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/project/issue_statistics_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/project/issue_statistics_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/business/project/webhook_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/business/project/webhook_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/administrate/templates/administrate/administrate_left_nav.html" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/administrate/templates/administrate/administrate_left_nav.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/administrate/urlrouter/admin_device_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/administrate/urlrouter/admin_urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/administrate/urlrouter/admin_urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/administrate/views/admin_device_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/auth_extend/user/views/auth_extend_user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/auth_extend/user/views/auth_extend_user_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/datamodels/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/datamodels/scminfo.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/datamodels/testjobdbrouter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/datamodels/testjobenum.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_autotask_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_dashboard_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_device_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_fortesting_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_issue_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_project_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_task_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_template_path.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/home/pagefactory/home_template_path.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_unlogin_pageworker.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/home/pagefactory/home_unlogin_pageworker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/pagefactory/home_webapps_pageworker.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/autotask/home_autotask_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/autotask/home_autotask_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/autotask/home_autotask_listview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/dashboard/home_dashboard_activity.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/dashboard/home_dashboard_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/dashboard/home_dashboard_summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/device/home_device_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/device/home_device_list_controll.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/device/home_device_list_page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/fortesting/home_fortesting_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/fortesting/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/fortesting/project_issue_webapp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/home/home_page_device.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/home/home_page_project_summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/issue/home_issue_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/issue/home_issue_webapp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/issue/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/project/home_project_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/project/home_project_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/project/home_project_list_control.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/project/home_project_listview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/task/home_task_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/task/home_task_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/testjob/home_testjob_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/testjob/home_testjob_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/testjob/home_testjob_listview.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/webapps/home_webapp_create_dialog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/webapps/home_webapp_index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/webapps/home_webapp_webpart.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/templates/webapps/home_webapps_leftsub_nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_autotask_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_dashboard_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_device_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_fortesting_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_issue_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_page_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_project_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_task_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_testjob_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/urlrouter/home_webapps_urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/viewmodels/vm_jenkins_job.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/viewmodels/vm_webapps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_autotask_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_dashboard_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_device_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_fortesting_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_issue_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_page_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/home/views/home_page_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_project_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_task_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_testjob_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/home/views/home_webapps_view.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/static/global/templates/masterpage_nirvana.html" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/static/global/templates/masterpage_nirvana.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doraemon/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doraemon/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teamcat_font_end/src/components/layout/AppHead.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../teamcat_font_end/src/components/layout/AppHead.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../teamcat_font_end/src/views/project/Head.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../teamcat_font_end/src/views/project/Head.vue" afterDir="false" />
-    </list>
+    <list default="true" id="30f13146-edb3-4456-9941-e2eb683937c0" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,15 +20,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="528">
               <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webhook_service.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/project/webhook_service.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-444">
-              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -282,14 +190,14 @@
               <item name="doraemon" type="462c0819:PsiDirectoryNode" />
               <item name="doraemon" type="462c0819:PsiDirectoryNode" />
               <item name="administrate" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="pagefactory" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doraemon" type="b2602c69:ProjectViewProjectNode" />
               <item name="doraemon" type="462c0819:PsiDirectoryNode" />
               <item name="doraemon" type="462c0819:PsiDirectoryNode" />
               <item name="administrate" type="462c0819:PsiDirectoryNode" />
-              <item name="urlrouter" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="doraemon" type="b2602c69:ProjectViewProjectNode" />
@@ -503,12 +411,12 @@
       <workItem from="1539246889562" duration="30000" />
       <workItem from="1539247062810" duration="18000" />
       <workItem from="1539310966140" duration="1412000" />
-      <workItem from="1539329471123" duration="5314000" />
+      <workItem from="1539329471123" duration="5567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6813000" />
+    <option name="totallyTimeSpent" value="7066000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
@@ -552,13 +460,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doraemon/home/pagefactory/home_unlogin_pageworker.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/doraemon/home/pagefactory/home_template_path.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1152">
@@ -847,6 +748,9 @@
           <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doraemon/administrate/pagefactory/admin_device_pageworker.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/doraemon/administrate/urlrouter/admin_urls.py">
       <provider selected="true" editor-type-id="text-editor">

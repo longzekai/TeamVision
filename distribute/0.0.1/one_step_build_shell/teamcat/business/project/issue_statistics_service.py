@@ -25,7 +25,10 @@ class IssueStatisticsService(object):
             result=result.filter(VersionID=int(version_id))
             if tmp_version.VStartDate and tmp_version.VReleaseDate:
                 result = result.filter(StatisticsDate__range=(tmp_version.VStartDate,tmp_version.VReleaseDate))
-        return result.order_by('StatisticsDate')[:30]
+        if len(result)>=30:
+            return result.order_by('StatisticsDate')[len(result)-30:]
+        else:
+            return result.order_by('StatisticsDate')
 
     @staticmethod
     def issue_count_bystatus(project_id,version_id,status):
