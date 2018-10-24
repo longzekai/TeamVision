@@ -6,6 +6,6 @@ cd $dir
 wget http://projects.unbit.it/downloads/uwsgi-2.0.17.1.tar.gz
 tar zxf  uwsgi-2.0.17.1.tar.gz
 cd uwsgi-2.0.17.1
-python3.5 uwsgiconfig.py --build
+python3 uwsgiconfig.py --build
 $dir/uwsgi-2.0.17.1/uwsgi --ini $dir/web_uwsgi.ini
 $dir/uwsgi-2.0.17.1/uwsgi --ini $dir/websocket_uwsgi.ini
