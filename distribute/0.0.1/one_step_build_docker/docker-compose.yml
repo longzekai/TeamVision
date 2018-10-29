@@ -5,7 +5,7 @@ services:
     build: ./nginx
     privileged: true
     ports:
-      - "80:80"
+      - "8848:80"
     volumes:
       - ./nginx:/web/nginx
       - ./nginx/conf:/etc/nginx/conf.d
