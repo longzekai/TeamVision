@@ -79,20 +79,20 @@ WSGI_APPLICATION = 'doraemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-MYSQLHOST = 'mysql_db'
-MYSQLPORT = '3306'
+MYSQLHOST = '127.0.0.1'
+MYSQLPORT = '8306'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'doraemon_nirvana',
-        'USER': 'teamcat',
+        'USER': 'root',
         'PASSWORD': '123456',
         'HOST': MYSQLHOST,
         'PORT': MYSQLPORT,
     },
 }
 
-MONGOHOST = "mongo_db"
+MONGOHOST = "127.0.0.1"
 MONGOPORT = 27017
 MONGODB = {
     'default': {
@@ -140,8 +140,8 @@ MONGODB = {
 
 }
 
-REDIS_HOST = "redis"
-REDIS_HOST_PORT = 6379
+REDIS_HOST = "127.0.0.1"
+REDIS_HOST_PORT = 8379
 REDIS = {
     'default': {
         "HOST": REDIS_HOST,

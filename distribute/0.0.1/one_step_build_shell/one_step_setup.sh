@@ -48,7 +48,7 @@ sh $dir/mysql/mysql.sh
 #
 chmod +x $dir/teamcat/startup.sh
 chmod +x $dir/teamcat/teamcat.sh
-sh $dir/teamcat/teamcat.sh
+
 
 
 
