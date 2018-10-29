@@ -30,6 +30,12 @@ TeamCat安装部署部分在distribute文件夹中，分为docker一键部署与
    ```sh
    $ ./one_step_setup.sh
    ```
+   修改distribute/0.0.1/one_step_build_shell/teamcat/doraemon/settings.py文件，将debug置为true,ALLOWED_HOSTS按原有结构将本机Ip添加 到里面。
+   执行teamcat.sh
+   
+   ```sh
+   $ ./teamcat.sh
+   ```
 4. 若目标机器已安装mysql，在进行到是否安装mysql时，请点击N，并进入到mysql文件夹执行如下命令（${password}为已有mysql的密码）
 
    ```sh
@@ -62,7 +68,7 @@ TeamCat安装部署部分在distribute文件夹中，分为docker一键部署与
 
 ## Quick Start
 
-   安装成功后，输入目标机器地址，端口8848，例如http://127.0.0.1:8488/ 访问teamcat
+   安装成功后，输入目标机器地址，端口8848，例如http://127.0.0.1:8848/ 访问teamcat
 ### 项目
 1. 添加首个自己的项目
 ![teamcat homepage](screenshots/Teamcat_program.jpg)
