@@ -20,9 +20,11 @@ TeamCat安装部署部分在distribute文件夹中，分为docker一键部署与
    $ docker-compose build
    $ docker-compose up
    ```
+#### 根据目前已使用人员的反馈，推荐大家使用docker安装，因shell部署是按照在一个全新机器上安装部署来写的，可能对原有机器各种组件的版本有影响，进而影响原有服务。而docker安装只要将docker安装成功，能够实现真正的一键部署。
 
 ### shell一键部署
 
+要求：CentOs7  python3.5
 1. 将distribute文件夹拷贝到要部署的目标机器
 2. 进入到distribute/0.0.1/one_step_build_shell/文件夹中,切换到root权限
 3. 执行one_step_setup.sh
