@@ -22,7 +22,7 @@ ROOT_DIR = "/web/www/teamcat/doraemon"
 SECRET_KEY = '3m4+k9yf02#+2g1$z!3_fly@x*27daj#9+0zpb)ad$thb)_kon'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = False
 
