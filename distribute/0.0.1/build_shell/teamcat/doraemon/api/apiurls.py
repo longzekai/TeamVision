@@ -20,8 +20,7 @@ from doraemon.api.api_render import DoraemonJSONRenderer
 import django_filters
 from rest_framework import filters
 # from doraemon.api.api_filters import APIFitlers
-from doraemon.api.mongo_models import add_user
-from doraemon.api.mongo_models import PostView
+
 
 
 # Serializers define the API representation.
@@ -108,25 +107,8 @@ class UserProfileView(generics.ListAPIView):
         This view should return a list of all the purchases for
         the user as determined by the username portion of the URL.
         """
-        add_user()
-        print(self.request.query_params)
         return User.objects.all()
 
-    
-#     def get_renderers(self):
-#         return [DoraemonJSONRenderer(self.code,self.message)]
-    
-#     def list(self,request):
-#         serialzer=self.serializer_class(self.get_queryset(),many=True)
-#         try:
-#             serialzer.is_valid()
-#             print(serialzer.errors)
-#         except Exception as ex:
-#             self.code=2
-#             self.message=3
-#             print(ex)
-#         print(serialzer.data)
-#         return Response(serialzer.data)
 
 
 class UserProfileListView(generics.ListAPIView):
@@ -137,12 +119,6 @@ class UserProfileListView(generics.ListAPIView):
     serializer_class = UserProfileSerializer
     permission_classes=(IsAuthenticatedOrReadOnly,)
     
-#     def get_queryset(self):
-#         """
-#         This view should return a list of all the purchases for
-#         the user as determined by the username portion of the URL.
-#         """
-#         return User.objects.all()
 
 class LoginView(APIView):
     """
