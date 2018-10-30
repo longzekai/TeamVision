@@ -8,7 +8,46 @@ Demo展示地址：[www.teamcat.cn](http://www.teamcat.cn)
 
 ## Installation
 
-TeamCat安装部署部分在distribute文件夹中，分为docker一键部署与shell一键部署两种方式：
+TeamCat安装部署部分在distribute文件夹中，分为组件分步部署与docker一键部署两种方式：
+
+### 分步部署：
+#### 要求：CentOs7  python3.5
+#### TeamCat组件依赖：
+mongo,redis,nginx,mysql,python
+在build_shell文件夹下面已提供各个组件的安装脚本，注：nginx与python3.5必须安装脚本安装，其他供参考。
+#### python安装要求：
+需py3.5版本，用ditribute/0.0.1/python/python.sh脚本安装。
+#### mongo安装要求：
+需3.4版本以上，不能添加密码，安装后能够启动成功。
+#### redis安装要求：
+需3.2版本以上，安装后能够启动成功。
+#### nginx安装要求：
+需1.12.0版本以上，因涉及到nginx.conf文件配置，必须用ditribute/0.0.1/build_shell/nginx/nginx.sh脚本安装。
+#### mysql安装要求：
+需5.6，5.7版本，安装后能能够启动成功，确保能够登录。
+将ditribute/0.0.1/build_shell/mysql 下面的doraemon_nirvana.sql导入到mysql。
+
+#### Teamcat 启动
+首先在机器上创建/web/www 目录，将ditribute/0.0.1/build_shell下面的 teamcat与dist 拷贝到/web/www/下面。
+打开ditribute/0.0.1/build_shell/teamcat/doraemon/settings.py，修改配置文件。
+
+将部署的机器地址添加到allow_host，如图所示
+![teamcat allowhost](screenshots/settings_allowhost.jpg)
+将安装的mongo信息添加到mongo配置，如图所示
+![teamcat mongo](screenshots/settings_mongo.jpg)
+将安装的redis信息添加到redis配置，如图所示
+![teamcat redis](screenshots/settings_redis.jpg)
+将安装的mysql信息添加到mysql配置，如图所示
+![teamcat mysql](screenshots/settings_mysql.jpg)
+将发送邮件服务器信息添加到email配置，如图所示
+![teamcat email](screenshots/settings_email.jpg)
+
+将teamcat.sh脚本加上执行权限，root权限下执行
+   执行teamcat.sh
+   
+   ```sh
+   $ ./teamcat.sh
+   ```
 
 ### docker一键部署
 
@@ -20,53 +59,9 @@ TeamCat安装部署部分在distribute文件夹中，分为docker一键部署与
    $ docker-compose build
    $ docker-compose up
    ```
-#### 根据目前已使用人员的反馈，推荐大家使用docker安装，因shell部署是按照在一个全新机器上安装部署来写的，可能对原有机器各种组件的版本有影响，进而影响原有服务。而docker安装只要将docker安装成功，能够实现真正的一键部署。
+#### 根据目前已使用人员的反馈，推荐大家使用docker安装，因shell部署是按照在一个全新机器上安装部署来写的，可能对原有机器各种组件的版本有影响，进而影响原有服务。而docker安装只要将docker安装成功，能够实现真正的一键部署。若docker安装因版本等问题报错，可选择按组件来分步安装。
 
-### shell一键部署
 
-要求：CentOs7  python3.5
-1. 将distribute文件夹拷贝到要部署的目标机器
-2. 进入到distribute/0.0.1/one_step_build_shell/文件夹中,切换到root权限
-3. 执行one_step_setup.sh
-
-   ```sh
-   $ ./one_step_setup.sh
-   ```
-   修改distribute/0.0.1/one_step_build_shell/teamcat/doraemon/settings.py文件，将debug置为true,ALLOWED_HOSTS按原有结构将本机Ip添加 到里面。
-   执行teamcat.sh
-   
-   ```sh
-   $ ./teamcat.sh
-   ```
-4. 若目标机器已安装mysql，在进行到是否安装mysql时，请点击N，并进入到mysql文件夹执行如下命令（${password}为已有mysql的密码）
-
-   ```sh
-   mysql -uroot -p${password}  < doraemon_nirvana.sql
-   mysql -uroot -p${password}  < privileges.sql
-   ```
-   若目标机器无mysql环境，点击Y，在安装完成后执行如下命令：
-   获取生成的随机密码：
-   ```sh
-   $ grep 'temporary password' /var/log/mysqld.log |awk '{print $NF}'
-   ```
-   用获取到的随机密码替换下面${mysqlpassword}执行命令：
-   ```sh
-   $ mysql -uroot -p${mysqlpassword}  -e "set global validate_password_policy=0"
-
-   $ mysql -uroot -p${mysqlpassword}  -e "set global validate_password_length=6"
-
-   $ mysql -uroot -p${mysqlpassword}  -e "ALTER USER 'root'@'localhost' IDENTIFIED BYY '123456'"
-   ```
-   进入到mysql文件夹执行ImportSQL.sh脚本
-   ```sh
-   $ ./ImportSQL.sh
-
-   ```
-   之后进入到teamcat文件夹，执行kill_uwsgi.py文件杀掉已有进程，执行teamcat.sh文件重启teamcat服务
-    ```sh
-   $ ./teamcat.sh
-
-   ```
 
 ## Quick Start
 
