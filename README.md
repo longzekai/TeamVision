@@ -39,7 +39,7 @@ mongo,redis,nginx,mysql,python
 ![teamcat redis](screenshots/settings_redis.jpg)
 将安装的mysql信息添加到mysql配置，如图所示
 ![teamcat mysql](screenshots/settings_mysql.jpg)
-将发送邮件服务器信息添加到email配置，如图所示
+将邮件服务器信息添加到email配置，如图所示
 ![teamcat email](screenshots/settings_email.jpg)
 
 将teamcat.sh脚本加上执行权限，root权限下执行
@@ -61,11 +61,12 @@ mongo,redis,nginx,mysql,python
    ```
 #### 根据目前已使用人员的反馈，推荐大家使用docker安装，因shell部署是按照在一个全新机器上安装部署来写的，可能对原有机器各种组件的版本有影响，进而影响原有服务。而docker安装只要将docker安装成功，能够实现真正的一键部署。若docker安装因版本等问题报错，可选择按组件来分步安装。
 
-
-
 ## Quick Start
 
    安装成功后，输入目标机器地址，端口8848，例如http://127.0.0.1:8848/ 访问teamcat
+   
+### 注：目前teamcat只支持chrome浏览器，初始登录账号：teamcat@teamcat.cn 密码：123456  用此账号登录后可自由添加账号。
+
 ### 项目
 1. 添加首个自己的项目
 ![teamcat homepage](screenshots/Teamcat_program.jpg)
