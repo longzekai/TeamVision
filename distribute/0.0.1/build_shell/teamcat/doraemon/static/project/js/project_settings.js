@@ -420,7 +420,7 @@ $(document).ready(function() {
 
 				$.post(rootUri + "/delete", function(data, status) {
 					if (data == "True") {
-						window.location.href = "/home/project/all";
+						window.location.href = "/project";
 					} else {
 						init_notification('error', data, true);
 					}
