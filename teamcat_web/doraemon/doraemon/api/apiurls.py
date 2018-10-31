@@ -20,129 +20,7 @@ from doraemon.api.api_render import DoraemonJSONRenderer
 import django_filters
 from rest_framework import filters
 # from doraemon.api.api_filters import APIFitlers
-from doraemon.api.mongo_models import add_user
-from doraemon.api.mongo_models import PostView
 
-
-# Serializers define the API representation.
-class UserSerializer(serializers.ModelSerializer):
-#     absolute_url= serializers.SerializerMethodField()
-    class Meta:
-        model = User
-        fields = ('url','username', 'email', 'is_staff')
-    
-    def get_absolute_url(self,obj):
-        return "fdsdsfdsfds"
-
-# Serializers define the API representation.
-class ProjectMemberSerializer(serializers.ModelSerializer):
-#     member_full_name= serializers.SerializerMethodField()
-#     member_email= serializers.SerializerMethodField()
-    class Meta:
-        model = ProjectMember
-        fields = ('url','PMProjectID','PMRoleID','PMRoleType','PMMember')
-    
-    def get_member_full_name(self,obj):
-        user=User.objects.get(id=obj.PMMember)
-        return user.last_name+user.first_name
-    
-    def get_member_email(self,obj):
-        user=User.objects.get(id=obj.PMMember)
-        return user.email
-
-# ViewSets define the view behavior.
-class ProjectMemberViewSet(viewsets.ModelViewSet):
-    queryset = ProjectMember.objects.all().filter(PMProjectID=14)
-    serializer_class = ProjectMemberSerializer
-    
-    @list_route()
-    def recent_users(self, request):
-        recent_users = ProjectMember.objects.all()
-
-        page = self.paginate_queryset(recent_users)
-        if page is not None:
-            serializer = self.get_serializer(page, many=True)
-            return self.get_paginated_response(serializer.data)
-
-        serializer = self.get_serializer(recent_users, many=True)
-        return Response(serializer.data)
-
-# ViewSets define the view behavior.
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    
-    
-
-    
-
-
-
-class UserProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-        fields = ('id','email', 'username', 'password', 'is_active')
-        extra_kwargs = {
-            'password': {'write_only': True}
-        }
-        read_only_fields = ('id',)
-
-
-
-class UserProfileView(generics.ListAPIView):
-    """
-    An endpoint for users to view and update their profile information.
-    """
-    serializer_class = UserProfileSerializer
-    permission_classes=(AllowAny,)
-    filter_fields = ('username','is_active')
-#     filter_class = APIFitlers
-    
-
-#     def get_object(self):
-#         id =int(self.kwargs['id'])
-#         return User.objects.get(id=id)
-    
-    def get_queryset(self):
-        """
-        This view should return a list of all the purchases for
-        the user as determined by the username portion of the URL.
-        """
-        add_user()
-        print(self.request.query_params)
-        return User.objects.all()
-
-    
-#     def get_renderers(self):
-#         return [DoraemonJSONRenderer(self.code,self.message)]
-    
-#     def list(self,request):
-#         serialzer=self.serializer_class(self.get_queryset(),many=True)
-#         try:
-#             serialzer.is_valid()
-#             print(serialzer.errors)
-#         except Exception as ex:
-#             self.code=2
-#             self.message=3
-#             print(ex)
-#         print(serialzer.data)
-#         return Response(serialzer.data)
-
-
-class UserProfileListView(generics.ListAPIView):
-    """
-    An endpoint for users to view and update their profile information.
-    """
-
-    serializer_class = UserProfileSerializer
-    permission_classes=(IsAuthenticatedOrReadOnly,)
-    
-#     def get_queryset(self):
-#         """
-#         This view should return a list of all the purchases for
-#         the user as determined by the username portion of the URL.
-#         """
-#         return User.objects.all()
 
 class LoginView(APIView):
     """
@@ -188,10 +66,7 @@ if settings.DEBUG:
 
 
 urlpatterns = [
-#     url(r'^login/$', LoginView.as_view(), name="login"),
-#     url(r'user/profiles/(?P<id>.+)/$', UserProfileView.as_view(), name="profile"),
-#     url(r'user/profiles', UserProfileView.as_view(), name="profile-list"),
-#     url(r'posts', PostView.as_view(), name="post-list"),
+
     url(r'^o/', include((oauth2_endpoint_views,'oauth2_provider'), namespace='oauth2_provider')),
     url(r'^docs/', include_docs_urls(title='Teamcat API')),
     url(r'project/', include('doraemon.api.project.urlrouter.project_urls')),
