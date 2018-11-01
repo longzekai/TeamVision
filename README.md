@@ -29,7 +29,7 @@ mongo,redis,nginx,mysql,python
 
 #### Teamcat 启动
 首先在机器上创建/web/www 目录，将ditribute/0.0.1/build_shell下面的 teamcat与dist 拷贝到/web/www/下面。
-打开ditribute/0.0.1/build_shell/teamcat/doraemon/settings.py，修改配置文件。
+打开/web/www/teamcat/doraemon/settings.py，修改配置文件。
 
 将部署的机器地址添加到allow_host，如图所示
 ![teamcat allowhost](screenshots/settings_allowhost.jpg)
