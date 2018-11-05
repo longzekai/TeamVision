@@ -33,8 +33,6 @@ rm -rf /usr/local/teamcat/nginx/conf/nginx.conf
 
 cp -f $dir/nginx.conf /usr/local/teamcat/nginx/conf/
 
-cp -r $dir/static /usr/local/teamcat/ 
-
 /usr/local/teamcat/nginx/sbin/nginx -c /usr/local/teamcat/nginx/conf/nginx.conf
 
 echo "nginx setup complete!"
