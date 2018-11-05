@@ -25,7 +25,7 @@ mongo,redis,nginx,mysql,python
 需1.12.0版本以上，因涉及到nginx.conf文件配置，必须用ditribute/0.0.1/build_shell/nginx/nginx.sh脚本安装。
 #### mysql安装要求：
 需5.6，5.7版本，安装后能能够启动成功，确保能够登录。
-将ditribute/0.0.1/build_shell/mysql 下面的doraemon_nirvana.sql导入到mysql。
+将ditribute/0.0.1/build_shell/mysql 下面的doraemon_nirvana.sql与privileges.sql导入到mysql。
 
 #### Teamcat 启动
 首先在机器上创建/web/www 目录，将ditribute/0.0.1/build_shell下面的 teamcat与dist 拷贝到/web/www/下面。
