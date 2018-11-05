@@ -4,6 +4,8 @@ echo "---------------------------------------------------------"
 
 echo "Python setup start!"
 
+mkdir -p /usr/local/teamcat
+
 cd /usr/local/teamcat
 
 # 安装依赖

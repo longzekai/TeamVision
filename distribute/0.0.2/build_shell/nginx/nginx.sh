@@ -7,7 +7,7 @@ echo "nginx setup start!"
 # 得到当前环境的执行目录
 dir=$(cd $(dirname $0); pwd)
 
-mkdir -p /usr/local/teamcat
+mkdir -p /web/www/logs/
 
 cd /usr/local/teamcat
 
