@@ -6,16 +6,13 @@
         <div class="app-body-header-leftbar-default pull-left">
           <ul class="app-body-head-menu">
 
-            <!--<router-link :to="'/project/'+projectID+'/plan'" tag="li" active-class="app-body-head-menu-item-active" class="app-body-head-menu-item">-->
-            <!--<a :href="'h/project/'+projectID+'/plan'"><i class="fa fa-fw  fa-bus"></i>计划</a>-->
-            <!--</router-link>-->
-
-            <router-link :to="'/project/'+ projectID +'/issue/all'" :exact="false" tag="li" active-class="app-body-head-menu-item-active" class="app-body-head-menu-item">
-              <a href=""><i class="fa fa-fw  fa-bug"></i>问题</a>
-            </router-link>
+            <li class="app-body-head-menu-item">
+              <a  :href="'/project/'+ projectID +'/issue/all'"><i class="fa fa-flag fa-fw fa-lg"></i> <span>问题</span></a>
+            </li>
             <router-link :to="'/project/'+projectID+'/fortesting'" tag="li" active-class="app-body-head-menu-item-active" class="app-body-head-menu-item">
               <a :href="'/project/'+projectID+'/fortesting'"><i class="fa fa-fw  fa-bus"></i>提测</a>
             </router-link>
+
             <router-link :to="'/project/'+projectID+'/task'" tag="li" active-class="app-body-head-menu-item-active" class="app-body-head-menu-item">
               <a :href="'h/project/'+projectID+'/task'"><i class="fa fa-fw  fa-bus"></i>任务</a>
             </router-link>

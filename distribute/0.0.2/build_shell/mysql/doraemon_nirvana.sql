@@ -976,7 +976,7 @@ CREATE TABLE `product` (
 --  Records of `product`
 -- ----------------------------
 BEGIN;
-INSERT INTO `product` VALUES ('1', '2017-06-13 10:08:53.000000', '1', 'VIDEO', 'ZB', 'VED-VIDEO', '1', null), ('2', '2017-10-31 11:46:44.000000', '1', 'AI', 'AI', 'AI', '1', null), ('3', '2017-12-21 10:02:53.000000', '1', 'Games-Ad', 'GAD', 'GAD', '1', null);
+INSERT INTO `product` VALUES ('1', '2017-06-13 10:08:53.000000', '1', 'Teamcat', 'Teamcat', 'Teamcat', '1', null);
 COMMIT;
 
 

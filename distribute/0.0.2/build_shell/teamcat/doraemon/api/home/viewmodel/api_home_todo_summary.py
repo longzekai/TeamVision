@@ -26,7 +26,7 @@ class HomeToDoSummary(object):
 
     def task_count(self):
         all_my_tasks = TaskService.all_my_tasks(self.request,'ALL',self.request.user.id)
-        all_my_tasks = all_my_tasks.filter(Status__in=(0,1))
+        all_my_tasks = all_my_tasks.filter(Status__in=(0,1)).filter(Parent=None)
         return len(all_my_tasks)
 
     def issue_count(self):

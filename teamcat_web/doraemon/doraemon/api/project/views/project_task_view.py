@@ -42,7 +42,7 @@ class ProjectTaskListView(generics.ListCreateAPIView):
                 qs=models.Task.objects.get_tasks(project_id).order_by('-Priority', '-id')
         else:
             qs=TaskService.all_my_tasks(self.request,'ALL',self.request.user.id)
-        return project_filter.ProjectTaskFilterSet(data=self.request.GET, queryset=qs).filter()
+        return project_filter.ProjectTaskFilterSet(data=self.request.GET, queryset=qs.filter(Parent=None)).filter()
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)

@@ -120,7 +120,7 @@ class ProjectService(object):
         tmp_project.PBPlatform=validate_data.get('PBPlatform')
         tmp_project.PBVisiableLevel=validate_data.get('PBVisiableLevel')
         tmp_project.PBLead=validate_data.get('PBLead')
-        tmp_project.Product=0
+        tmp_project.Product=1
         tmp_project.PBHttpUrl=validate_data.get('PBHttpUrl')
         tmp_project.PBAvatar="/static/global/images/project-icon/scenery-"+str(random.randint(1, 24))+".png"
         return tmp_project

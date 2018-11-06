@@ -121,6 +121,7 @@
       },
       loadToDoSummary: function () {
         this.$axios.get('/api/home/todo/summary').then(response => {
+          console.log(response)
           this.toDoSummary.taskCount=response.data.result.task_count
           this.toDoSummary.issueCount=response.data.result.issue_count
           this.toDoSummary.fortestingCount=response.data.result.fortesting_count

@@ -74,21 +74,21 @@ WSGI_APPLICATION = 'doraemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-MYSQLHOST = '127.0.0.1'
-MYSQLPORT = '8306'
+MYSQLHOST = '10.69.58.195'
+MYSQLPORT = '8001'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'doraemon_nirvana',
-        'USER': 'root',
-        'PASSWORD': '123456',
+        'USER': 'teamcat',
+        'PASSWORD': 'Nopass.2',
         'HOST': MYSQLHOST,
         'PORT': MYSQLPORT,
     },
 }
 
-MONGOHOST = "127.0.0.1"
-MONGOPORT = 27017
+MONGOHOST = "10.69.58.195"
+MONGOPORT = 8807
 MONGODB = {
     'default': {
         'HOST': MONGOHOST,
@@ -135,8 +135,8 @@ MONGODB = {
 
 }
 
-REDIS_HOST = "127.0.0.1"
-REDIS_HOST_PORT = 8379
+REDIS_HOST = "10.69.58.195"
+REDIS_HOST_PORT = 8803
 REDIS = {
     'default': {
         "HOST": REDIS_HOST,
@@ -279,7 +279,7 @@ DATABASE_ROUTERS = ['doraemon.automationtesting.datamodels.automationtaskdbroute
                     'doraemon.productquality.datamodels.productqualitydbrouter.ProductQualityDBRouter']
 
 LOGIN_URL = "/user/login"
-LOG_CONFIG = ('/web/www/teamcat/doraemon/logconfig.conf').replace('\\', '/')
+LOG_CONFIG = (BASE_DIR+'/logconfig.conf').replace('\\', '/')
 
 WEB_HOST = "http://localhost"
 REST_FRAMEWORK = {
