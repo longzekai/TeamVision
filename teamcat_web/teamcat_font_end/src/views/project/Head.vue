@@ -82,7 +82,7 @@
 
   computed: {
       showVersionDropDown: function () {
-        if (this.$route.name === 'projectTask' || this.$route.name === 'projectFortesting' || this.$route.name === 'projectPlan') {
+        if (this.$route.name === 'projectTask' || this.$route.name === 'projectFortesting') {
           return true
         }
         else {
@@ -90,7 +90,7 @@
         }
       },
     showNewButton: function () {
-      if (this.$route.name === 'projectTask' || this.$route.name === 'projectFortesting' || this.$route.name === 'projectPlan' ||this.$route.name === 'projectIssue') {
+      if (this.$route.name === 'projectTask' || this.$route.name === 'projectFortesting') {
         return true
       }
       else {
