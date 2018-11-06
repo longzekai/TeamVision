@@ -5,8 +5,9 @@ Demo展示地址：[www.teamcat.cn](http://www.teamcat.cn)
 
 ![teamcat homepage](screenshots/Teamcat_homepage.jpg)
 
-
 ## Installation
+
+### 之后我们提供的偶数版本为稳定版本，奇数版本为测试版本，请下载安装的同学注意。
 
 TeamCat安装部署部分在distribute文件夹中，分为组件分步部署与docker一键部署两种方式：
 
@@ -18,13 +19,13 @@ mongo,redis,nginx,mysql,python
 #### python安装要求：
 需py3.5版本，用ditribute/0.0.1/python/python.sh脚本安装。
 #### mongo安装要求：
-需3.4版本以上，不能添加密码，安装后能够启动成功。
+需3.4版本以上，不能添加密码，安装后能够启动成功，并且在安装teamcat的机器能够访问。注：（因不同人在不同环境，包括执行目录等等因素，可能导致脚本中的相关路径有微弱差异，请自行修改，提供的安装脚本只是为大家方便，仅作参考）
 #### redis安装要求：
-需3.2版本以上，安装后能够启动成功。
+需3.2版本以上，安装后能够启动成功，并且在安装teamcat的机器能够访问。
 #### nginx安装要求：
-需1.12.0版本以上，因涉及到nginx.conf文件配置，必须用ditribute/0.0.1/build_shell/nginx/nginx.sh脚本安装。
+需1.12.0版本以上，因涉及到nginx.conf文件配置，必须用ditribute/0.0.1/build_shell/nginx/nginx.sh脚本安装。注：（因不同人在不同环境，包括执行目录等等因素，可能导致脚本中的相关路径有微弱差异，请自行修改，提供的安装脚本只是为大家方便，仅作参考）
 #### mysql安装要求：
-需5.6，5.7版本，安装后能能够启动成功，确保能够登录。
+需5.6，5.7版本，安装后能能够启动成功，确保能够登录，并且在安装teamcat的机器能够访问。注：（之前我们遇到很多同学是因ip限制等因素无法连接数据库，导致登录报用户名不存在，项目不存在等等一些列问题，后续的同学请注意一下）
 将ditribute/0.0.1/build_shell/mysql 下面的doraemon_nirvana.sql与privileges.sql导入到mysql。
 
 #### Teamcat 启动
