@@ -27,7 +27,7 @@ let initTaskForm = (taskID) => {
         Owner: '',
         Priority: '3',
         DeadLine: '',
-        WorkHour: 8,
+        WorkHours: 8,
         Description: '',
         ProjectID: [],
         childTask: {
@@ -61,7 +61,7 @@ let taskValidateRules={
     { type: 'string', required: true, min: 1, max: 50, message: '标题长度必须在1-50个字符之间！', trigger: 'blur' }
   ],
   WorkHours: [
-    { type: 'integer', required: true, message: '请输入工时！' }
+    { required: true, message: '请输入工时！' }
   ]
 }
 
