@@ -44,7 +44,8 @@ mongo,redis,nginx,mysql,python
 ![teamcat mysql](screenshots/settings_mysql.jpg)
 将邮件服务器信息添加到email配置，如图所示
 ![teamcat email](screenshots/settings_email.jpg)
-
+将webhost改成你部署后访问teamcat的地址，例如“http://www.teamcat.cn”
+![teamcat email](screenshots/settings_webhost.jpg)
 将teamcat.sh脚本加上执行权限，root权限下执行
    执行teamcat.sh
    
