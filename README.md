@@ -9,7 +9,7 @@ Demo展示地址：[www.teamcat.cn](http://www.teamcat.cn)
 
 ### 之后我们提供的偶数版本为稳定版本，奇数版本为测试版本，请下载安装的同学注意。
 
-TeamCat安装部署部分在distribute文件夹中，分为组件分步部署与docker一键部署两种方式：
+TeamCat安装部署部分在distribute文件夹中，采用组件分步部署方式：
 
 ### 分步部署：
 #### 要求：CentOs7  python3.5
@@ -52,18 +52,6 @@ mongo,redis,nginx,mysql,python
    ```sh
    $ ./teamcat.sh
    ```
-
-### docker一键部署
-
-前提：需要目标机器安装docker环境，并且系统要求在docker_V1.8,CentOS_7以上
-1. 将distribute文件夹拷贝到要部署的目标机器
-2. 进入到distribute/0.0.1/one_step_build_docker/文件夹中,执行如下命令：
- 
-   ```sh
-   $ docker-compose build
-   $ docker-compose up
-   ```
-#### 根据目前已使用人员的反馈，推荐大家使用docker安装，因shell部署是按照在一个全新机器上安装部署来写的，可能对原有机器各种组件的版本有影响，进而影响原有服务。而docker安装只要将docker安装成功，能够实现真正的一键部署。若docker安装因版本等问题报错，可选择按组件来分步安装。
 
 ## Quick Start
 
