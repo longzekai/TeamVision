@@ -1,0 +1,26 @@
+{
+    "": [
+        "readme.md", 
+        "screenshots", 
+        "distribute", 
+        "teamcat_web", 
+        "teamcat_controller", 
+        "teamcat_agent"
+    ], 
+    "__positions": {
+        "teamcat_web": 4, 
+        "teamcat_agent": 6, 
+        "distribute": 3, 
+        "teamcat_controller": 5, 
+        "screenshots": 2, 
+        "readme.md": 1
+    }, 
+    "__raw_positions": {
+        "teamcat_web": 4, 
+        "teamcat_agent": 6, 
+        "distribute": 3, 
+        "teamcat_controller": 5, 
+        "screenshots": 2, 
+        "readme.md": 1
+    }
+}

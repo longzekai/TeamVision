@@ -14,9 +14,9 @@
  Date: 09/26/2018 10:16:04 AM
 */
 
-CREATE DATABASE `doraemon_nirvana` DEFAULT character SET utf8 collate utf8_general_ci;
+CREATE DATABASE `team_vision` DEFAULT character SET utf8 collate utf8_general_ci;
 
-use doraemon_nirvana;
+use team_vision;
 
 SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;

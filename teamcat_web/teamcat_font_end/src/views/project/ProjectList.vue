@@ -69,7 +69,7 @@
       },
 
       loadProjectList: function () {
-        this.$axios.get('/api/project/list?extinfo=0&home=1').then(response => {
+        this.$axios.get('/api/project/list?extinfo=0&my=1').then(response => {
           this.myProject = response.data.result
         }, response => {
           this.setTaskChange(true)

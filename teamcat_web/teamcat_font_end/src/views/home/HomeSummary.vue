@@ -11,7 +11,11 @@
             <Col span="8" style="padding: 20px;">
                <Card :padding="20" style="height: 100px;" dis-hover>
                  <div class="summary-number-title">问题:</div>
-                 <div class="summary-number-content">{{ toDoSummary.issueCount }}</div>
+                 <div class="summary-number-content">
+                   <a href="/home/issue/1">
+                     {{ toDoSummary.issueCount }}
+                   </a>
+                 </div>
                </Card>
             </Col>
             <Col span="8"  style="padding: 20px" >

@@ -159,13 +159,13 @@ REDIS = {
 }
 
 EMAILCONFIG = {
-    'HOST': 'smtp.email.com',
+    'HOST': 'smtp.126.com',
     'PORT': 25,
-    'USER': 'qa',
-    'PASSWORD': '',
-    'ISAUTH': False,
+    'USER': 'test17810396061',
+    'PASSWORD': 'qwer4321',
+    'ISAUTH': True,
     'STARTSSL': False,
-    'POSTFIX': 'email.com'
+    'POSTFIX': '126.com'
 }
 
 # Internationalization
@@ -260,7 +260,7 @@ WS4REDIS_CONNECTION = {
     'port': REDIS_HOST_PORT
 }
 
-BASE_DIR_TEST = "/web/www/teamcat/doraemon"
+BASE_DIR_TEST = BASE_DIR
 EMAIL_TEMPLATES = {
     "ForTesting": BASE_DIR_TEST + '/static/project/contents/commit_testing_emailtemplate.html'.replace('\\', '/'),
     "BuildPackage": os.path.join(BASE_DIR_TEST, '/static/project/contents/build_package_emailtemplate.html').replace(
