@@ -70,9 +70,9 @@ mongo,redis,nginx,mysql,python
    
      1) 首先进入CI-设置，添加一个Agent。添加完成后，记住AgentID，这个ID就是创建Agent成功以后列表行#号后面的数字。.这个ID需要在启动Agent的时候配置到agent.properties文件里。也就是修改agent.key.
  ![Agent创建窗口](screenshots/AgentCreate.png)
-2)  Redis服务器信息更新
-     在数据库中DicData表里找到309，310两行记录把IP地址和端口换成和前面Settings文件里一致
-3）Controller启动
+2) Redis服务器信息更新
+在数据库中DicData表里找到309，310两行记录把IP地址和端口换成和前面Settings文件里一致
+3) Controller启动
 将distribute/0.0.X/目录下将conroller的zip包拷贝到目标机器（要求JDK8）上解压缩。然后修改controller.properties文件。
 一共两个配置项：
 INTERFACE_BASE_URL = http://10.69.58.195:8443/（***服务地址，别漏了最后的斜杠***）EMAIL_IS_AUTH = false （***发送邮件时需要密码的话改为true***）
@@ -80,9 +80,8 @@ INTERFACE_BASE_URL = http://10.69.58.195:8443/（***服务地址，别漏了最�
 4) Agent启动
 将distribute/0.0.X/目录下的agent.zip 复制到目标目录，解压缩。修改agent.propities文件。
 agent.key= (**这里填写前面的agentid**)
-server.host= http://10.69.58.195:8443/ (**这里和前面controller配置文件里的INTERFACE_BASE_URL一致**)
-启动名称 直接agent.sh 就可以。如果是windows系统用agent.bat脚本就行。
-5  CI构建邮件发送
+server.host= http://10.69.58.195:8443/ (**这里和前面controller配置文件里的INTERFACE_BASE_URL一致**)启动名称 直接agent.sh 就可以。如果是windows系统用agent.bat脚本就行。
+5)  CI构建邮件发送
 我们可能在Settings文件里配置过一次邮件相关的东西了，但是CI相关邮件的发送还要再配置一次。(**后续会尽快提供系统配置功能，统一配置**）CI邮件相关的配置在数据库字典表里。请修改DicData表里：17，18，19，20行，相应的配置即可。如果要密码才能发送邮件，请参考前面controller.properties文件的配置。字典表的第26行可以配置默认的收件人，也就是无论项目成员有没有他都可以通过默认收件人配置收到邮件。
 
 2.使用步骤：
