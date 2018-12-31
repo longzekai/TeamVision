@@ -66,7 +66,7 @@ mongo,redis,nginx,mysql,python
 ### CI:
    CI部分功能使用需要部署Controller与Agent，Controller具有监听、调度、下发任务等功能，Agent负责在所需的不同机器上执行具体构建任务，简要架构如下：
 ![teamcat homepage](screenshots/Teamcat_CI.jpg)
-#### 1. 部署准备
+1. 部署准备
    
      1) 首先进入CI-设置，添加一个Agent。添加完成后，记住AgentID，这个ID就是创建Agent成功以后列表行#号后面的数字。.这个ID需要在启动Agent的时候配置到agent.properties文件里。也就是修改agent.key.
  ![Agent创建窗口](screenshots/AgentCreate.png)
@@ -88,7 +88,7 @@ mongo,redis,nginx,mysql,python
                  （**后续会尽快提供系统配置功能，统一配置**）CI邮件相关的配置在数据库字典表里。
                 请修改DicData表里：17，18，19，20行，相应的配置即可。如果要密码才能发送邮件，请参考前面controller.properties文件的配置。字典表的第26行可以配置默认的收件人，也就是无论项目成员有没有他都可以通过默认收件人配置收到邮件。
 
-#### 2.使用步骤：
+2.使用步骤：
    添加一个CI任务，设置好任务配置及构建参数即可实现每日构建，自动化测试，一键部署等功能。具体来看一下怎么配置。
     ####创建任务
        + 任务类型
@@ -100,7 +100,7 @@ mongo,redis,nginx,mysql,python
 ![任务界面](screenshots/CITaskPage.png)
 **点击任务卡片右上角的配置图标进入任务配置页面，如下图**。
 ![](screenshots/CIConfigBasic.png)
-##### 任务构成。包含以下几部分。
+任务构成。包含以下几部分。
 - 基本配置:基本配置如果使用过jenkins应该都清除，这里主要说一下定时的规则。如果你写一个具体的时间例如12：23：34分这代表每天12点23分34秒执行。如果你写12:**:**则代表每隔12小时执行一次。**:08:**则是每隔8分钟执行一次。**注意定时器是在你制定时间前后一定时间内执行，有一定时间差。**
 - 构建前: 构建前操作请放到这个部分
 - SCM： 代码相关操作可以放到这个部分
