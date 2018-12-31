@@ -68,17 +68,17 @@ mongo,redis,nginx,mysql,python
 ![teamcat homepage](screenshots/Teamcat_CI.jpg)
 1. 部署准备
    
-     1.1 首先进入CI-设置，添加一个Agent。添加完成后，记住AgentID，这个ID就是创建Agent成功以后列表行#号后面的数字。.这个ID需要在启动Agent的时候配置到agent.properties文件里。也就是修改agent.key.
+     1.1. 首先进入CI-设置，添加一个Agent。添加完成后，记住AgentID，这个ID就是创建Agent成功以后列表行#号后面的数字。.这个ID需要在启动Agent的时候配置到agent.properties文件里。也就是修改agent.key.
  ![Agent创建窗口](screenshots/AgentCreate.png)
-1.2 Redis服务器信息更新
+1.2. Redis服务器信息更新
 在数据库中DicData表里找到309，310两行记录把IP地址和端口换成和前面Settings文件里一致
-1.3 Controller启动
+1.3. Controller启动
    
 将distribute/0.0.X/目录下将conroller的zip包拷贝到目标机器（要求JDK8）上解压缩。然后修改controller.properties文件。一共两个配置项：
 - INTERFACE_BASE_URL = http://10.69.58.195:8443/（***服务地址，别漏了最后的斜杠***）
 - EMAIL_IS_AUTH = false （***发送邮件时需要密码的话改为true***）
 **最后就是启动Controller了，命令是：controller.sh start**
-1.4 Agent启动
+1.4. Agent启动
    
 将distribute/0.0.X/目录下的agent.zip 复制到目标目录，解压缩。修改agent.propities文件。
 - agent.key= (**这里填写前面的agentid**)
