@@ -125,6 +125,25 @@ Copy to Server| 复制产物或其他包到服务器| 无
 XCode配置检查| 对XCODE项目做项目配置检查| 无
 XCTest测试|已经过期| 无
 Selenium| WebUI自动化插件|依赖GAT| 无
+
+**重点提示: 请在配置完插件后做点击保存。从不同的构建阶段切换时，如果不保存，配置将会丢失**
+
+**重点提示: 请在配置完插件后做点击保存。从不同的构建阶段切换时，如果不保存，配置将会丢失**
+
+**重点提示: 请在配置完插件后做点击保存。从不同的构建阶段切换时，如果不保存，配置将会丢失**
+
+以上就是如何配置一个简单的任务。接下来说一下CI默认提供的全局变量。大家可以在CI--设置进去就可以看到。
+名称|用法|说明
+-|:-|:-:
+WORKSPACE|${WORKSPACE}|代表当前任务在Agent上的工作目录
+BUILDTOOL|${BUILDTOOL}|Agent上的构建工具目录
+BUILDVERSION|${BUILDVERSION}|代表当前任务的构建版本，根据构建次数自增
+COMMONSPACE|${COMMONSPACE}|各构建任务可以共享的一个目录
+BUILDBACKUPSPACE|${BUILDBACKUPSPACE}|根据构建版本自动创建的目录，不会随任务执行清除
+TASKID|${TASKID}|构建任务ID
+TASKNAME|${TASKNAME}|构建任务名称
+HISTORYID|${HISTORYID}|构建任务记录ID,使用记录相关API获取上传package下载URL
+
       
 
 ## Q&A
