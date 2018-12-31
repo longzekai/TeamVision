@@ -134,7 +134,7 @@ Selenium| WebUI自动化插件|依赖GAT| 无
 
 以上就是如何配置一个简单的任务。接下来说一下CI默认提供的全局变量。大家可以在CI--设置进去就可以看到。
 名称|用法|说明
--|:-|:-:
+-|:-:|-:
 WORKSPACE|${WORKSPACE}|代表当前任务在Agent上的工作目录
 BUILDTOOL|${BUILDTOOL}|Agent上的构建工具目录
 BUILDVERSION|${BUILDVERSION}|代表当前任务的构建版本，根据构建次数自增
