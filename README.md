@@ -70,7 +70,7 @@ mongo,redis,nginx,mysql,python
      >1) 首先进入CI-设置，添加一个Agent。添加完成后，记住AgentID，这个ID就是创建Agent成功以后列表行#号后面的数字。.这个ID需要在启动Agent的时候配置到agent.properties文件里。也就是修改agent.key.
  ![Agent创建窗口](screenshots/AgentCreate.png)
      > 2)  Redis服务器信息更新
-                在数据库中DicData表里找到309，310两行记录把IP地址和端口换成和前面Settings文件里一致
+     在数据库中DicData表里找到309，310两行记录把IP地址和端口换成和前面Settings文件里一致
      > 3）Controller启动
                将distribute/0.0.X/目录下将conroller的zip包拷贝到目标机器（要求JDK8）上解压缩。然后修改controller.properties文件。
             一共两个配置项：
@@ -107,9 +107,8 @@ mongo,redis,nginx,mysql,python
      > *** 注意上面提到的构建前，SCM，构建，构建后都是逻辑概念，并不会硬性的区分成几个阶段，后续版本可能会考虑添加成强制概念***
 
     >  任务的执行过程是由具体的步骤构成的。可以在配置页面的右上角的步骤列表里找到适用的步骤插件。步骤插件可以添加多个，通过拖动插件来改变插件的执行顺序。插件包括 代码，构建，服务端测试，WebUI测试，Android，IOS构建插件，以及shell插件等。看下表可以知道目前提供的插件以及功能。
-    >
-      名称|功能|依赖
-      ---|:---:|---:
+名称|功能|依赖
+---|:---:|---:
 SVN| SVN代码管理插件
 GIT|代码管理插件
 Shell 命令行|执行Shell命令或者批处理
