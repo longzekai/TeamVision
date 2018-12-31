@@ -69,7 +69,7 @@ mongo,redis,nginx,mysql,python
 1. 部署准备
      >1) 首先进入CI-设置，添加一个Agent。添加完成后，记住AgentID，这个ID就是创建Agent成功以后列表行#号后面的数字。.这个ID需要在启动Agent的时候配置到agent.properties文件里。也就是修改agent.key. 
 
-         ![Agent创建窗口](http://teamcat.cn/static/AgentCreate.png)
+         ![Agent创建窗口](screenshots/AgentCreate.png)
        > 2)  Redis服务器信息更新
                 在数据库中DicData表里找到309，310两行记录把IP地址和端口换成和前面Settings文件里一致
        >
