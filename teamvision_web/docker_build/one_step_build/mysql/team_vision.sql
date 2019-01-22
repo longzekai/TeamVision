@@ -152,7 +152,7 @@ CREATE TABLE `auth_user` (
 --  Records of `auth_user`
 -- ----------------------------
 BEGIN;
-INSERT INTO `auth_user` VALUES ('1', 'pbkdf2_sha256$100000$r5or5rIt7Whg$c+6efLZNgOZ4802kSnMgBSJSyOWmjlWjwnjf3A0K4WU=', '2019-01-11 09:57:32', '1', 'admin', '理员', '管', 'teamcat@teamcat.cn', '1', '1', '2014-10-16 09:42:16'), ('3', 'pbkdf2_sha256$100000$PNJfE9gOThIA$h9n59Ry5juSCZW3Z8wqvxgu16GjtgMx7MLggY0JVniA=', null, '0', 'teamvision', 'MO', 'DE', 'teamvision@teamvision.com', '0', '1', '2019-01-11 09:58:33');
+INSERT INTO `auth_user` VALUES ('1', 'pbkdf2_sha256$100000$r5or5rIt7Whg$c+6efLZNgOZ4802kSnMgBSJSyOWmjlWjwnjf3A0K4WU=', '2019-01-11 09:57:32', '1', 'admin', '理员', '管', 'teamcat@teamcat.cn', '1', '1', '2014-10-16 09:42:16'), ('2', 'pbkdf2_sha256$100000$4ynPZ61wgfdw$gk0JGWejyzKHa6XSci5CfquEy589dL6nLIpEwDYx2RY=', '2019-01-15 08:19:19', '0', '155174391', '天得', '张', '155174391@qq.com', '0', '1', '2018-12-09 12:57:12'), ('3', 'pbkdf2_sha256$100000$PNJfE9gOThIA$h9n59Ry5juSCZW3Z8wqvxgu16GjtgMx7MLggY0JVniA=', null, '0', 'teamvision', 'MO', 'DE', 'teamvision@teamvision.com', '0', '1', '2019-01-11 09:58:33');
 COMMIT;
 
 -- ----------------------------

@@ -16,13 +16,13 @@ services:
       - django_web
 
   django_web:
-    build: ./teamcat
+    build: ./teamvision
     expose:
       - "8055"
       - "8066"
     volumes:
-      - ./teamcat:/web/www/teamcat
-    working_dir: /web/www/teamcat
+      - ./teamvision:/web/www/teamvision
+    working_dir: /web/www/teamvision
     command: "sh startup.sh"
     networks:
       teamcat:

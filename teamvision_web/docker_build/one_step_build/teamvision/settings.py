@@ -1,6 +1,6 @@
 # coding=utf-8
 """
-Django settings for doraemon project.
+Django settings for teamvision project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__)) + r"/doraemon"
-ROOT_DIR = "/web/www/teamcat/doraemon"
+BASE_DIR = os.path.dirname(os.path.dirname(__file__)) + r"/teamvision"
+ROOT_DIR = "/web/www/teamvision/teamvision"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -22,11 +22,11 @@ ROOT_DIR = "/web/www/teamcat/doraemon"
 SECRET_KEY = '3m4+k9yf02#+2g1$z!3_fly@x*27daj#9+0zpb)ad$thb)_kon'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = False
+# TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['demo.teamcat.cn']
 
 # Application definition
 
@@ -37,19 +37,17 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #     'doraemon.testcase',
-    #     'doraemon.automationtesting',
-    #     'doraemon.testjob',
-    #     'doraemon.userauthority',
-    'doraemon.ci',
-    'doraemon.api',
-    'doraemon.home',
-    'doraemon.project',
-    'doraemon.auth_extend.user',
-    'doraemon.user_center',
-    'doraemon.administrate',
-    'doraemon.device',
-    'doraemon.logcat',
+    'teamvision.ci',
+    'teamvision.api',
+    # 'teamvision.env',
+    'teamvision.interface',
+    'teamvision.home',
+    'teamvision.project',
+    'teamvision.auth_extend.user',
+    'teamvision.user_center',
+    'teamvision.administrate',
+    'teamvision.device',
+    'teamvision.logcat',
     'ws4redis',
     'rest_framework',
     'rest_framework_mongoengine',
@@ -63,29 +61,58 @@ INSTALLED_APPS = (
 
 MIDDLEWARE = (
     # 'django.middleware.csrf.CsrfViewMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
 )
 
-ROOT_URLCONF = 'doraemon.urls'
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+)
 
-WSGI_APPLICATION = 'doraemon.wsgi.application'
+CORS_ORIGIN_ALLOW_ALL = True
 
-# Database
-# https://docs.djangoproject.com/en/1.6/ref/settings/#databases
+CORS_ORIGIN_WHITELIST = (
+    'localhost:8080',
+)
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = (
+    'XMLHttpRequest',
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'sessionId',
+    'CSRF'
+)
+
+ROOT_URLCONF = 'teamvision.urls'
+
+WSGI_APPLICATION = 'teamvision.wsgi.application'
 
 MYSQLHOST = 'mysql_db'
 MYSQLPORT = '3306'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'doraemon_nirvana',
-        'USER': 'teamcat',
+        'NAME': 'team_vision',
+        'USER': 'teamvision',
         'PASSWORD': '123456',
         'HOST': MYSQLHOST,
         'PORT': MYSQLPORT,
@@ -98,43 +125,43 @@ MONGODB = {
     'default': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat',
-        'ALIAS': 'teamcat'
+        'DB': 'teamvision',
+        'ALIAS': 'teamvision'
     },
     'log': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat_log',
-        'ALIAS': 'teamcat_log'
+        'DB': 'teamvision_log',
+        'ALIAS': 'teamvision_log'
     },
     'archive': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat_archive',
-        'ALIAS': 'teamcat_archive'
+        'DB': 'teamvision_archive',
+        'ALIAS': 'teamvision_archive'
     },
     'release_archive': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat_release_resp',
+        'DB': 'teamvision_release_resp',
         'ALIAS': 'release_resp'
     },
     'project_documents': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat_project_doc',
+        'DB': 'teamvision_project_doc',
         'ALIAS': 'project_documents'
     },
     'project_issue': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat_project_issue',
+        'DB': 'teamvision_project_issue',
         'ALIAS': 'project_issue'
     },
     'env_mock': {
         'HOST': MONGOHOST,
         'PORT': MONGOPORT,
-        'DB': 'teamcat_env_mock',
+        'DB': 'teamvision_env_mock',
         'ALIAS': 'env_mock'
     }
 
@@ -164,13 +191,27 @@ REDIS = {
 }
 
 EMAILCONFIG = {
-    'HOST': 'smtp.email.com',
+    'HOST': 'smtp.kingsoft.com',
     'PORT': 25,
-    'USER': 'qa',
+    'USER': 'gedqa',
     'PASSWORD': '',
     'ISAUTH': False,
     'STARTSSL': False,
-    'POSTFIX': 'email.com'
+    'POSTFIX': 'kingsoft.com'
+}
+
+EMAIL_TEMPLATES = {
+    "ForTesting": BASE_DIR + '/static/project/contents/commit_testing_emailtemplate.html'.replace('\\', '/'),
+    "BuildPackage": os.path.join(BASE_DIR, '/static/project/contents/build_package_emailtemplate.html').replace(
+        '\\', '/'),
+    "ParameterGroupChangedPage": BASE_DIR + '/static/ci/contents/task_parameter_group_notification.html'.replace(
+        '\\', '/'),
+    "ParameterGroupChangedDetail": BASE_DIR + '/static/ci/contents/task_parameter_group_change_detail.html'.replace(
+        '\\', '/'),
+    "TestingFinished": BASE_DIR + '/static/project/contents/testing_finished_emailtemplate.html'.replace('\\',
+                                                                                                              '/'),
+    "InTesting": BASE_DIR + '/static/project/contents/in_testing_emailtemplate.html'.replace('\\', '/'),
+    "Issue": BASE_DIR + '/static/project/contents/issue_status_changed_emailtemplate.html'.replace('\\', '/'),
 }
 
 # Internationalization
@@ -239,8 +280,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'ws4redis.context_processors.default',
             ],
-            'builtins': ['doraemon.auth_extend.user.templatetags.auth_required',
-                         'doraemon.auth_extend.user.templatetags.project_role_required'
+            'builtins': ['teamvision.auth_extend.user.templatetags.auth_required',
+                         'teamvision.auth_extend.user.templatetags.project_role_required'
                          ],
         },
     },
@@ -265,28 +306,13 @@ WS4REDIS_CONNECTION = {
     'port': REDIS_HOST_PORT
 }
 
-BASE_DIR_TEST = "/web/www/teamcat/doraemon"
-EMAIL_TEMPLATES = {
-    "ForTesting": BASE_DIR_TEST + '/static/project/contents/commit_testing_emailtemplate.html'.replace('\\', '/'),
-    "BuildPackage": os.path.join(BASE_DIR_TEST, '/static/project/contents/build_package_emailtemplate.html').replace(
-        '\\', '/'),
-    "ParameterGroupChangedPage": BASE_DIR_TEST + '/static/ci/contents/task_parameter_group_notification.html'.replace(
-        '\\', '/'),
-    "ParameterGroupChangedDetail": BASE_DIR_TEST + '/static/ci/contents/task_parameter_group_change_detail.html'.replace(
-        '\\', '/'),
-    "TestingFinished": BASE_DIR_TEST + '/static/project/contents/testing_finished_emailtemplate.html'.replace('\\',
-                                                                                                              '/'),
-    "InTesting": BASE_DIR_TEST + '/static/project/contents/in_testing_emailtemplate.html'.replace('\\', '/'),
-    "Issue":BASE_DIR_TEST+'/static/project/contents/issue_status_changed_emailtemplate.html'.replace('\\','/'),
-}
-
-DATABASE_ROUTERS = ['doraemon.automationtesting.datamodels.automationtaskdbrouter.AutomationTaskDBRouter',
-                    'doraemon.productquality.datamodels.productqualitydbrouter.ProductQualityDBRouter']
+DATABASE_ROUTERS = ['teamvision.automationtesting.datamodels.automationtaskdbrouter.AutomationTaskDBRouter',
+                    'teamvision.productquality.datamodels.productqualitydbrouter.ProductQualityDBRouter']
 
 LOGIN_URL = "/user/login"
-LOG_CONFIG = ('/web/www/teamcat/doraemon/logconfig.conf').replace('\\', '/')
+LOG_CONFIG = (BASE_DIR+'/logconfig.conf').replace('\\','/')
 
-WEB_HOST = "http://localhost"
+WEB_HOST = "http://localhost:8000"
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
@@ -296,13 +322,14 @@ REST_FRAMEWORK = {
     ],
     #     'PAGE_SIZE': 5,
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        #         'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        # 'rest_framework.authentication.TokenAuthentication',
         #         'oauth2_provider.ext.rest_framework.OAuth2Authentication',
     ],
     #     'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',),
     'DEFAULT_RENDERER_CLASSES': (
         #         'rest_framework.renderers.JSONRenderer',
-        'doraemon.api.api_render.DoraemonJSONRenderer',
+        'teamvision.api.api_render.TeamvisionJSONRenderer',
     ),
     'DEFAULT_FILTER_BACKENDS': [
         'url_filter.integrations.drf.DjangoFilterBackend',
