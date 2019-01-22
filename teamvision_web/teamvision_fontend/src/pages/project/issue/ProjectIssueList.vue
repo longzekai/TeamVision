@@ -76,7 +76,7 @@
 
         onSearchIssue: function (value) {
           this.setSearchKeyword(value)
-          this.loadIssueList(this.project,this.projectVersion)
+          this.loadIssueList(this.project,0)
         },
 
         handleReachBottom: function() {
@@ -117,7 +117,7 @@
         }
       },
     created: function () {
-      this.loadIssueList(this.project,this.projectVersion)
+      this.loadIssueList(this.project,0)
     },
     mounted: function () {
     },
@@ -126,13 +126,13 @@
       issueChange: function (value) {
         if(value)
         {
-          this.loadIssueList(this.project,this.projectVersion)
+          this.loadIssueList(this.project,0)
           this.setIssueChange(false)
         }
       },
 
       issueFilters: function (value) {
-        this.loadIssueList(this.project,this.projectVersion)
+        this.loadIssueList(this.project,0)
         this.setIssueChange(false)
       }
 
