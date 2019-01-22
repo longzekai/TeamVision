@@ -13,6 +13,9 @@
 
  Date: 01/22/2019 13:44:44 PM
 */
+CREATE DATABASE `team_vision` DEFAULT character SET utf8 collate utf8_general_ci;
+
+use team_vision;
 
 SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
