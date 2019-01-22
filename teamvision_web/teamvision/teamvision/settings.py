@@ -106,20 +106,20 @@ ROOT_URLCONF = 'teamvision.urls'
 
 WSGI_APPLICATION = 'teamvision.wsgi.application'
 
-MYSQLHOST = '115.29.96.185'
+MYSQLHOST = '11.29.6.15'
 MYSQLPORT = '3306'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'team_vision',
         'USER': 'root',
-        'PASSWORD': 'Nopass.2',
+        'PASSWORD': 'XXXXX',
         'HOST': MYSQLHOST,
         'PORT': MYSQLPORT,
     },
 }
 
-MONGOHOST = "140.143.236.132"
+MONGOHOST = "10.13.36.12"
 MONGOPORT = 8807
 MONGODB = {
     'default': {
@@ -167,7 +167,7 @@ MONGODB = {
 
 }
 
-REDIS_HOST = "140.143.236.132"
+REDIS_HOST = "10.13.2.2"
 REDIS_HOST_PORT = 8803
 REDIS = {
     'default': {
@@ -191,28 +191,27 @@ REDIS = {
 }
 
 EMAILCONFIG = {
-    'HOST': 'smtp.kingsoft.com',
+    'HOST': 'smtp.126.com',
     'PORT': 25,
-    'USER': 'gedqa',
+    'USER': 'qa',
     'PASSWORD': '',
     'ISAUTH': False,
     'STARTSSL': False,
-    'POSTFIX': 'kingsoft.com'
+    'POSTFIX': '126.com'
 }
 
-BASE_DIR_TEST = "/Users/ethan/Documents/OneDrive/coding.net/teamvision_lte/teamvision/teamvision"
 EMAIL_TEMPLATES = {
-    "ForTesting": BASE_DIR_TEST + '/static/project/contents/commit_testing_emailtemplate.html'.replace('\\', '/'),
-    "BuildPackage": os.path.join(BASE_DIR_TEST, '/static/project/contents/build_package_emailtemplate.html').replace(
+    "ForTesting": BASE_DIR + '/static/project/contents/commit_testing_emailtemplate.html'.replace('\\', '/'),
+    "BuildPackage": os.path.join(BASE_DIR, '/static/project/contents/build_package_emailtemplate.html').replace(
         '\\', '/'),
-    "ParameterGroupChangedPage": BASE_DIR_TEST + '/static/ci/contents/task_parameter_group_notification.html'.replace(
+    "ParameterGroupChangedPage": BASE_DIR + '/static/ci/contents/task_parameter_group_notification.html'.replace(
         '\\', '/'),
-    "ParameterGroupChangedDetail": BASE_DIR_TEST + '/static/ci/contents/task_parameter_group_change_detail.html'.replace(
+    "ParameterGroupChangedDetail": BASE_DIR + '/static/ci/contents/task_parameter_group_change_detail.html'.replace(
         '\\', '/'),
-    "TestingFinished": BASE_DIR_TEST + '/static/project/contents/testing_finished_emailtemplate.html'.replace('\\',
+    "TestingFinished": BASE_DIR + '/static/project/contents/testing_finished_emailtemplate.html'.replace('\\',
                                                                                                               '/'),
-    "InTesting": BASE_DIR_TEST + '/static/project/contents/in_testing_emailtemplate.html'.replace('\\', '/'),
-    "Issue": BASE_DIR_TEST + '/static/project/contents/issue_status_changed_emailtemplate.html'.replace('\\', '/'),
+    "InTesting": BASE_DIR + '/static/project/contents/in_testing_emailtemplate.html'.replace('\\', '/'),
+    "Issue": BASE_DIR + '/static/project/contents/issue_status_changed_emailtemplate.html'.replace('\\', '/'),
 }
 
 # Internationalization
