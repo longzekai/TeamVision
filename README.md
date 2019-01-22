@@ -28,11 +28,11 @@ mongo,redis,nginx,mysql,python
 ##### 注：（因不同人在不同环境，包括执行目录等等因素，可能导致脚本中的相关路径有微弱差异，请自行修改，提供的安装脚本只是为大家方便，仅作参考）
 #### mysql安装要求：
 需5.6，5.7版本，安装后能能够启动成功，确保能够登录，并且在安装teamcat的机器能够访问。
-将ditribute/0.0.1/build_shell/mysql 下面的doraemon_nirvana.sql与privileges.sql导入到mysql。
+将ditribute/0.0.1/build_shell/mysql 下面的team_vision.sql与privileges.sql导入到mysql。
 ##### 注：（之前我们遇到很多同学是因ip限制,ip端口不通等因素无法连接数据库，导致登录报用户名不存在，项目不存在等等一些列问题，后续的同学请注意一下）
 #### Teamvision 启动
-首先在机器上创建/web/www 目录，将ditribute/0.0.1/build_shell下面的 teamcat与dist 拷贝到/web/www/下面。
-打开/web/www/teamcat/doraemon/settings.py，修改配置文件。
+首先在机器上创建/web/www 目录，将ditribute/0.0.1/build_shell下面的 teamvision与dist 拷贝到/web/www/下面。
+打开/web/www/teamvision/teamvision/settings.py，修改配置文件。
 
 将部署的机器地址添加到allow_host，如图所示
 ![teamcat allowhost](screenshots/settings_allowhost.jpg)
@@ -47,17 +47,17 @@ mongo,redis,nginx,mysql,python
 将webhost改成你部署后访问teamcat的地址，例如“http://www.teamcat.cn”
 ![teamcat email](screenshots/settings_webhost.jpg)
 将teamcat.sh脚本加上执行权限，root权限下执行
-   执行teamcat.sh
+   执行teamvision.sh
    
    ```sh
-   $ ./teamcat.sh
+   $ ./teamvision.sh
    ```
 
 ## Quick Start
 
-   安装成功后，输入目标机器地址，端口8848，例如http://127.0.0.1:8848/ 访问teamcat
+   安装成功后，输入目标机器地址，端口8848，例如http://127.0.0.1:8848/ 访问teamvision
    
-### 注：目前teamcat只支持chrome浏览器，初始登录账号：teamcat@teamcat.cn 密码：123456  用此账号登录后可自由添加账号。
+### 注：目前teamvision只支持chrome浏览器，初始登录账号：teamvision@teamvision.cn 密码：123456  用此账号登录后可自由添加账号。
 
 ### 项目
 1. 添加首个自己的项目
