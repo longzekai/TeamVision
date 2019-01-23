@@ -191,13 +191,13 @@ REDIS = {
 }
 
 EMAILCONFIG = {
-    'HOST': 'smtp.kingsoft.com',
+    'HOST': 'smtp.126.com',
     'PORT': 25,
-    'USER': 'gedqa',
+    'USER': 'qa',
     'PASSWORD': '',
     'ISAUTH': False,
     'STARTSSL': False,
-    'POSTFIX': 'kingsoft.com'
+    'POSTFIX': '126.com'
 }
 
 EMAIL_TEMPLATES = {
